@@ -1,0 +1,126 @@
+{
+	"client": "Thunder Client",
+	"collectionName": "todoApp",
+	"dateExported": "2021-07-15T23:04:23.337Z",
+	"version": "1.1",
+	"folders": [],
+	"requests": [
+		{
+			"containerId": "",
+			"sortNum": 10000,
+			"headers": [
+				{ "name": "Accept", "value": "*/*" },
+				{
+					"name": "User-Agent",
+					"value": "Thunder Client (https://www.thunderclient.io)"
+				}
+			],
+			"colId": "1b6432cb-a52b-40bb-b0b3-f1ba277fc1b3",
+			"name": "list todo items",
+			"url": "{{apiURI}}/todo",
+			"method": "GET",
+			"modified": "2021-07-15T22:46:31.869Z",
+			"created": "2021-07-15T22:12:12.649Z",
+			"_id": "457e4598-df82-48e8-88cd-e8bd250c5613",
+			"params": [],
+			"tests": []
+		},
+		{
+			"containerId": "",
+			"sortNum": 20000,
+			"headers": [
+				{ "name": "Accept", "value": "*/*" },
+				{
+					"name": "User-Agent",
+					"value": "Thunder Client (https://www.thunderclient.io)"
+				}
+			],
+			"colId": "1b6432cb-a52b-40bb-b0b3-f1ba277fc1b3",
+			"name": "get a todo item",
+			"url": "{{apiURI}}/todo/1",
+			"method": "GET",
+			"modified": "2021-07-15T22:47:52.437Z",
+			"created": "2021-07-15T22:29:01.241Z",
+			"_id": "003b2565-7c50-4111-9d2e-1636415b400e",
+			"params": [],
+			"tests": []
+		},
+		{
+			"containerId": "",
+			"sortNum": 30000,
+			"headers": [
+				{ "name": "Accept", "value": "*/*" },
+				{
+					"name": "User-Agent",
+					"value": "Thunder Client (https://www.thunderclient.io)"
+				}
+			],
+			"colId": "1b6432cb-a52b-40bb-b0b3-f1ba277fc1b3",
+			"name": "create a todo item",
+			"url": "{{apiURI}}/todo",
+			"method": "POST",
+			"modified": "2021-07-15T22:55:47.590Z",
+			"created": "2021-07-15T22:29:40.626Z",
+			"_id": "53152b9c-c03b-4461-8357-2761b7ccb61a",
+			"params": [],
+			"body": {
+				"type": "formencoded",
+				"raw": "",
+				"form": [
+					{ "name": "title", "value": "todo 1" },
+					{ "name": "status", "value": "todo" }
+				]
+			},
+			"tests": []
+		},
+		{
+			"containerId": "",
+			"sortNum": 40000,
+			"headers": [
+				{ "name": "Accept", "value": "*/*" },
+				{
+					"name": "User-Agent",
+					"value": "Thunder Client (https://www.thunderclient.io)"
+				}
+			],
+			"colId": "1b6432cb-a52b-40bb-b0b3-f1ba277fc1b3",
+			"name": "update a todo",
+			"url": "{{apiURI}}/todo/2",
+			"method": "PUT",
+			"modified": "2021-07-15T23:01:32.043Z",
+			"created": "2021-07-15T22:48:11.473Z",
+			"_id": "3faa6d04-06f0-4b59-9dc8-5765e21e0b0e",
+			"params": [],
+			"body": {
+				"type": "formencoded",
+				"raw": "",
+				"form": [
+					{ "name": "title", "value": "todo 883" },
+					{ "name": "description", "value": "this is a description." },
+					{ "name": "status", "value": "todo" }
+				]
+			},
+			"tests": []
+		},
+		{
+			"containerId": "",
+			"sortNum": 50000,
+			"headers": [
+				{ "name": "Accept", "value": "*/*" },
+				{
+					"name": "User-Agent",
+					"value": "Thunder Client (https://www.thunderclient.io)"
+				}
+			],
+			"colId": "1b6432cb-a52b-40bb-b0b3-f1ba277fc1b3",
+			"name": "delete a todo",
+			"url": "{{apiURI}}/todo/2",
+			"method": "DELETE",
+			"modified": "2021-07-15T22:55:23.774Z",
+			"created": "2021-07-15T22:52:15.185Z",
+			"_id": "5de908f2-217b-43f8-b16f-a33a4dbe1fd6",
+			"params": [],
+			"tests": []
+		}
+	]
+}
