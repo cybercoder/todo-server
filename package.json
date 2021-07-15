@@ -5,7 +5,13 @@
 	"main": "todoApp.js",
 	"license": "MIT",
 	"scripts": {
+		"dev": "cross-env NODE_ENV=dev nodemon --trace-warnings todoApp.js",
 		"test": "cross-env NODE_ENV=test jest"
+	},
+	"nodemonConfig": {
+		"ignore": [
+			"*.json"
+		]
 	},
 	"devDependencies": {
 		"@types/jest": "^26.0.24",
