@@ -1,7 +1,7 @@
 {
 	"name": "todo",
 	"version": "0.0.0",
-	"description": "todo example for communair exam test.",
+	"description": "todo example for Communere exam test.",
 	"main": "todoApp.js",
 	"license": "MIT",
 	"scripts": {
