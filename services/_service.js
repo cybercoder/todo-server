@@ -17,8 +17,12 @@ class Service {
 	 * @param {object} data
 	 */
 	create(data) {
-		let { id } = db.count(`/${this.model}`) > 0 ? db.getData(`/${this.model}[-1]`) : 0;
-		return db.push(`/${this.model}[]`, {id : (parseInt(id) || 0) + 1 , ...data});
+		let { id } =
+			db.count(`/${this.model}`) > 0 ? db.getData(`/${this.model}[-1]`) : 0;
+		return db.push(`/${this.model}[]`, {
+			id: (parseInt(id) || 0) + 1,
+			...data,
+		});
 	}
 
 	read(id) {
@@ -41,8 +45,10 @@ class Service {
 		return true;
 	}
 
-	list() {
-		return db.getData(`/${this.model}`);
+	list({ filter = null } = {}) {
+		if (!filter || filter === 'null')
+			return db.getData(`/${this.model}`);
+		return db.getData(`/${this.model}`).filter((item) => item.status===filter);
 	}
 }
 

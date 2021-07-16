@@ -1,5 +1,5 @@
 const express = require("express");
-
+const morgan = require("morgan");
 const todoApp = express();
 const mainRouter = require("./router");
 
@@ -7,6 +7,7 @@ todoApp.use((req, res, next) => {
 	res.setHeader("X-Powered-By", "envoy"); // make a little decoy :))
 	next();
 });
+todoApp.use(morgan("tiny"));
 todoApp.use(express.json());
 todoApp.use(express.urlencoded({ extended: true }));
 

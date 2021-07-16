@@ -6,8 +6,12 @@ const router = new Router();
 // express validator or Joy ...
 // paginator, search, filter, order
 router.get("/", async (req, res) => {
+	let {
+		query: { filter },
+	} = req;
+	console.log(filter);
 	try {
-		return res.status(200).json(await TodosService.list());
+		return res.status(200).json(await TodosService.list({ filter }));
 	} catch (error) {
 		// logger
 		console.error(error);
