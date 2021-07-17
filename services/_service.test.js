@@ -5,6 +5,7 @@ describe("testing parent service root class", () => {
 	let Xoxo;
 
 	beforeAll(() => {
+		db.push("/Xoxo", [], true);
 		Xoxo = new Service("Xoxo");
 	});
 
